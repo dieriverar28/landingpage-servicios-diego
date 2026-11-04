@@ -1,0 +1,232 @@
+/* ============================================================
+   DiegoTech — style.css (Archivo de estilos principal)
+   ---------------------------------------------------------
+   Diseño: serio, mate, sin efectos de IA.
+   Paleta: beige, café y grises mate cálidos.
+   Sin degradados, sin blur, sin backdrop-filter, sin brillos.
+
+   Estructura del archivo:
+   1. Variables y reset .............. :root, *
+   2. Clases de uso general ........... .contenedor-central, .enlace-salta
+   3. Botones ......................... .boton, .boton-primario, etc.
+   4. Navegación / encabezado ......... .encabezado-barra, .navegacion-menu, etc.
+   5. Hero / portada .................. .portada-hero, .portada-titulo, etc.
+   6. Secciones generales ............. .seccion, .seccion-encabezado, etc.
+   7. Qué incluye tu página .......... .lista-incluye, .item-incluye
+   8. Servicios ....................... .cuadricula-servicios, .tarjeta-servicio
+   9. Cómo funciona ................... .lista-pasos, .paso-numero
+   10. Llamado a la acción / contacto . .caja-contacto
+   11. Pie de página .................. .pie-pagina
+   12. Botón flotante WhatsApp ........ .boton-whatsapp-flotante
+   13. Responsive / accesibilidad ..... @media
+   ============================================================ */
+
+/* ---------- 1. VARIABLES Y RESET ---------- */
+:root {
+  --fondo-pagina: #efe8d8;
+  --fondo-claro: #faf6ec;
+  --fondo-beige-medio: #e2d7bf;
+  --fondo-oscuro: #2e241a;
+  --texto-principal: #2e241a;
+  --texto-secundario: #716248;
+  --texto-claro: #f3edde;
+  --texto-claro-suave: #c9b995;
+  --color-borde: #d9cdb2;
+  --color-borde-oscuro: #5a4a36;
+  --verde-whatsapp: #1e7a46;
+  --verde-whatsapp-oscuro: #185e37;
+  --radio-esquinas: 6px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--fondo-pagina);
+  color: var(--texto-principal);
+  line-height: 1.65;
+}
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 1.25;
+}
+img { max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--texto-principal); outline-offset: 2px; }
+
+/* ---------- 2. CLASES DE USO GENERAL ---------- */
+.contenedor-central { width: min(1040px, 92%); margin: 0 auto; }
+.enlace-salta { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.enlace-salta:focus { left: 16px; top: 16px; width: auto; height: auto; padding: 8px 16px; background: var(--fondo-oscuro); color: var(--texto-claro); z-index: 2000; }
+
+/* ---------- 3. BOTONES ---------- */
+/* Botones planos y serios: esquinas poco redondeadas, sin sombras de colores */
+.boton {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px 24px; border-radius: var(--radio-esquinas); border: 1px solid var(--fondo-oscuro);
+  font-weight: 700; font-size: 15px; text-decoration: none; cursor: pointer;
+  transition: background-color .2s, color .2s, border-color .2s;
+}
+.boton-primario { background: var(--fondo-oscuro); color: var(--texto-claro); }
+.boton-primario:hover { background: #443724; }
+.boton-contorno { background: transparent; color: var(--texto-principal); border-color: var(--texto-principal); }
+.boton-contorno:hover { background: var(--fondo-oscuro); color: var(--texto-claro); }
+.boton-claro { background: var(--texto-claro); color: var(--texto-principal); border-color: var(--texto-claro); }
+.boton-claro:hover { background: #fff; }
+.boton-contorno-claro { background: transparent; color: var(--texto-claro); border-color: var(--texto-claro-suave); }
+.boton-contorno-claro:hover { border-color: var(--texto-claro); background: #3d2f20; }
+.boton-whatsapp { background: var(--verde-whatsapp); color: #fff; border-color: var(--verde-whatsapp); font-weight: 800; }
+.boton-whatsapp:hover { background: var(--verde-whatsapp-oscuro); border-color: var(--verde-whatsapp-oscuro); }
+.boton-grande { padding: 16px 32px; font-size: 16px; }
+
+/* ---------- 4. NAVEGACIÓN / ENCABEZADO ---------- */
+/* Encabezado fijo: se oculta al bajar y aparece al subir (ver JS en home.html) */
+.encabezado-barra {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--fondo-pagina);
+  border-bottom: 1px solid var(--color-borde);
+  transform: translateY(0);
+  transition: transform .3s ease;
+}
+.encabezado-barra.oculta { transform: translateY(-100%); }
+.encabezado-contenido { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; gap: 24px; }
+.logo-sitio { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 22px; letter-spacing: -.01em; text-decoration: none; }
+.logo-sitio span { color: var(--texto-secundario); font-weight: 400; }
+.navegacion-menu { display: flex; align-items: center; gap: 24px; }
+.navegacion-lista { display: flex; align-items: center; gap: 24px; list-style: none; margin: 0; padding: 0; }
+.navegacion-lista a { text-decoration: none; color: var(--texto-secundario); font-weight: 600; font-size: 15px; }
+.navegacion-lista a:hover { color: var(--texto-principal); text-decoration: underline; }
+.boton-menu-movil {
+  display: none; background: none; border: 1px solid var(--color-borde); border-radius: var(--radio-esquinas);
+  color: var(--texto-principal); font-size: 24px; line-height: 1; padding: 8px 12px; cursor: pointer;
+}
+
+/* ---------- 5. HERO / PORTADA ---------- */
+/* Portada en café mate sólido, texto beige. Sin degradados ni efectos. */
+.portada-hero {
+  padding: 88px 0 72px; text-align: center;
+  background: var(--fondo-oscuro);
+  color: var(--texto-claro);
+}
+.portada-insignia {
+  display: inline-block; padding: 8px 16px; border-radius: var(--radio-esquinas);
+  border: 1px solid var(--color-borde-oscuro); color: var(--texto-claro-suave);
+  font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+}
+.portada-titulo { font-size: clamp(2rem, 5vw, 3.2rem); margin: 24px auto 16px; max-width: 760px; }
+.portada-subtitulo { max-width: 680px; margin: 0 auto; color: var(--texto-claro-suave); font-size: 17px; }
+.portada-botones { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin: 40px 0 48px; }
+.portada-datos { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.portada-datos div {
+  text-align: center; max-width: 220px; flex: 1 1 180px;
+  background: var(--fondo-beige-medio);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-esquinas); padding: 20px 16px;
+}
+.portada-datos strong { display: block; font-size: 16px; font-family: Georgia, serif; color: var(--texto-principal); margin-bottom: 4px; }
+.portada-datos span { color: var(--texto-secundario); font-size: 14px; }
+
+/* ---------- 6. SECCIONES GENERALES ---------- */
+.seccion { padding: 88px 0; }
+.seccion-fondo-claro { background: var(--fondo-claro); }
+.seccion-encabezado { text-align: center; max-width: 680px; margin: 0 auto 48px; }
+.seccion-etiqueta { color: var(--texto-secundario); font-weight: 800; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+.seccion-encabezado h2 { font-size: clamp(1.7rem, 3.5vw, 2.2rem); margin: 8px 0 16px; }
+.seccion-encabezado p { color: var(--texto-secundario); margin: 0; }
+
+/* ---------- 7. QUÉ INCLUYE TU PÁGINA ---------- */
+.lista-incluye { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+.item-incluye {
+  background: var(--fondo-claro);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-esquinas);
+  padding: 24px;
+}
+.item-incluye h3 { margin: 0 0 8px; font-size: 19px; }
+.item-incluye p { color: var(--texto-secundario); margin: 0; font-size: 15px; }
+.item-incluye .item-numero { display: block; font-family: Georgia, serif; font-size: 14px; color: var(--texto-secundario); margin-bottom: 16px; }
+
+/* ---------- 8. SERVICIOS ---------- */
+.cuadricula-servicios { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: stretch; }
+.tarjeta-servicio {
+  background: var(--fondo-claro);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-esquinas);
+  padding: 32px;
+  display: flex; flex-direction: column;
+}
+.tarjeta-servicio:hover { border-color: var(--texto-principal); }
+.tarjeta-etiqueta {
+  display: inline-block; align-self: flex-start; padding: 6px 12px; margin-bottom: 16px;
+  background: var(--fondo-beige-medio); border: 1px solid var(--color-borde);
+  border-radius: var(--radio-esquinas);
+  font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+}
+.tarjeta-titulo { margin: 0 0 12px; font-size: 24px; }
+.tarjeta-descripcion { color: var(--texto-secundario); margin: 0 0 16px; font-size: 15px; }
+.tarjeta-lista { list-style: none; margin: 0 0 24px; padding: 0; }
+.tarjeta-lista li { padding: 8px 0; border-top: 1px solid var(--color-borde); font-size: 15px; }
+.tarjeta-lista li:first-child { border-top: 0; }
+.tarjeta-enlace { margin-top: auto; color: var(--texto-principal); font-weight: 700; font-size: 15px; text-decoration: underline; }
+.tarjeta-enlace:hover { color: var(--texto-secundario); }
+
+/* ---------- 9. CÓMO FUNCIONA ---------- */
+.lista-pasos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; list-style: none; margin: 0; padding: 0; counter-reset: paso; }
+.paso { background: var(--fondo-claro); border: 1px solid var(--color-borde); border-radius: var(--radio-esquinas); padding: 24px; }
+.paso-numero {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--fondo-oscuro); color: var(--texto-claro);
+  font-family: Georgia, serif; font-weight: 700; margin-bottom: 16px;
+}
+.paso h3 { margin: 0 0 8px; font-size: 19px; }
+.paso p { color: var(--texto-secundario); margin: 0; font-size: 15px; }
+
+/* ---------- 10. LLAMADO A LA ACCIÓN / CONTACTO ---------- */
+.caja-contacto {
+  background: var(--fondo-oscuro);
+  color: var(--texto-claro);
+  border-radius: var(--radio-esquinas);
+  padding: 48px; text-align: center;
+}
+.caja-contacto h2 { margin: 0 0 16px; font-size: clamp(1.6rem, 3vw, 2.1rem); }
+.caja-contacto p { margin: 0 auto 32px; max-width: 600px; color: var(--texto-claro-suave); }
+
+/* ---------- 11. PIE DE PÁGINA ---------- */
+.pie-pagina { padding: 32px 0; text-align: center; color: var(--texto-secundario); font-size: 14px; border-top: 1px solid var(--color-borde); background: var(--fondo-pagina); }
+.pie-pagina p { margin: 0; }
+
+/* ---------- 12. BOTÓN FLOTANTE WHATSAPP ---------- */
+.boton-whatsapp-flotante {
+  position: fixed; right: 24px; bottom: 24px; z-index: 1000;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--verde-whatsapp);
+  display: flex; align-items: center; justify-content: center;
+  transition: background-color .2s;
+}
+.boton-whatsapp-flotante:hover { background: var(--verde-whatsapp-oscuro); }
+.boton-whatsapp-flotante svg { width: 30px; height: 30px; fill: #fff; }
+
+/* ---------- 13. RESPONSIVE / ACCESIBILIDAD ---------- */
+@media (max-width: 768px) {
+  .boton-menu-movil { display: block; }
+  .navegacion-menu {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--fondo-pagina); border-bottom: 1px solid var(--color-borde);
+    padding: 24px; flex-direction: column; align-items: stretch; gap: 16px;
+  }
+  .navegacion-menu.activo { display: flex; }
+  .navegacion-lista { flex-direction: column; align-items: stretch; gap: 16px; }
+  .portada-hero { padding: 64px 0 48px; }
+  .portada-datos { gap: 24px; }
+  .seccion { padding: 64px 0; }
+  .cuadricula-servicios { grid-template-columns: 1fr; }
+  .caja-contacto { padding: 32px 24px; }
+  .tarjeta-servicio { padding: 24px; }
+  .boton-whatsapp-flotante { right: 16px; bottom: 16px; width: 56px; height: 56px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
