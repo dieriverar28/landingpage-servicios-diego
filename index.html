@@ -2,28 +2,36 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <!-- FIN EN "HEAD": aquí cambias título, descripción y el enlace a style.css -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DiegoTech — Páginas web informativas para emprendedores y servicio técnico de formateo e instalación de software.">
+  <meta name="description" content="DiegoTech — Páginas web informativas con QR y WhatsApp para emprendedores, y servicio técnico de formateo e instalación de software.">
+  <meta property="og:title" content="DiegoTech | Páginas web y servicio técnico">
+  <meta property="og:description" content="Página web informativa + QR + WhatsApp para tu negocio. También servicio técnico de formateo e instalación de software.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
   <title>DiegoTech | Páginas web y servicio técnico</title>
-
-  <!-- STYLESHEET EXTERNO: todos los estilos están en css/style.css -->
-  <!-- Si mueves la carpeta css, cambia aquí la ruta -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%230E1620'/><text x='32' y='44' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'>DT</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "DiegoTech",
+    "description": "Páginas web informativas para emprendedores y servicio técnico de formateo e instalación de software.",
+    "telephone": "+56 9 3862 1425",
+    "areaServed": "Chile",
+    "priceRange": "$$"
+  }
+  </script>
 </head>
 <body>
 
-  <!-- ======================================================
-       ACCESIBILIDAD: enlace para saltar directo a servicios
-       ====================================================== -->
+  <!-- ACCESIBILIDAD -->
   <a class="enlace-salta" href="#seccion-servicios">Saltar a servicios</a>
 
-  <!-- ======================================================
-       SECCIÓN 1 · ENCABEZADO / MENÚ DE NAVEGACIÓN
-       - .encabezado-barra ......... barra superior de color sólido
-       - .logo-sitio ............... nombre del negocio (cambia "DiegoTech")
-       - .navegacion-menu .......... lista de links + botón Cotizar
-       ====================================================== -->
+  <!-- SECCION 1 · ENCABEZADO -->
   <header class="encabezado-barra">
     <div class="contenedor-central encabezado-contenido">
       <a class="logo-sitio" href="#inicio">Diego<span>Tech</span></a>
@@ -35,71 +43,82 @@
           <li><a href="#seccion-servicios">Servicios</a></li>
           <li><a href="#seccion-contacto">Contacto</a></li>
         </ul>
-        <!-- CAMBIA el número: 521234567890 = código de país (52) + tu número, sin +, espacios ni guiones -->
         <a class="boton boton-primario" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio." target="_blank" rel="noopener">Cotizar</a>
       </nav>
     </div>
   </header>
 
-  <!-- ================= INICIO DEL CONTENIDO ================= -->
   <main>
-
-    <!-- ====================================================
-         SECCIÓN 2 · PORTADA / HERO (negro mate sólido)
-         - .portada-insignia .... etiqueta superior
-         - .portada-titulo ...... título principal
-         - .portada-subtitulo ... texto debajo del título
-         - .portada-botones ..... botones principales
-         - .portada-datos ....... 3 puntos clave (página, QR, WhatsApp)
-       ==================================================== -->
+    <!-- SECCION 2 · PORTADA -->
     <section class="portada-hero" id="inicio">
-      <div class="contenedor-central">
-        <span class="portada-insignia">Páginas web para emprendedores</span>
-        <h1 class="portada-titulo">Tu página web informativa para impulsar tu negocio</h1>
-        <p class="portada-subtitulo">Presenta lo que vendes o el servicio que ofreces en una página clara y profesional. Un código QR en tu local o tarjeta lleva directo a tu página, con botón de WhatsApp para recibir pedidos y consultas.</p>
-        <div class="portada-botones">
-          <a class="boton boton-claro boton-grande" href="#seccion-servicios">Ver servicios</a>
-          <a class="boton boton-contorno-claro boton-grande" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio." target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      <div class="contenedor-central portada-contenido">
+        <div class="portada-texto">
+          <span class="portada-insignia">Páginas web para emprendedores</span>
+          <h1 class="portada-titulo">Tu negocio en una página que suma clientes</h1>
+          <p class="portada-subtitulo">Página informativa + código QR + botón de WhatsApp. Tu cliente escanea, ve qué vendes y te escribe directo. Entrega entre 24 y 48 horas.</p>
+          <div class="portada-botones">
+            <a class="boton boton-primario boton-grande" href="#seccion-servicios">Ver servicios</a>
+            <a class="boton boton-contorno-claro boton-grande" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio." target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+          <div class="portada-datos" aria-label="Beneficios">
+            <div><strong>Página informativa</strong><span>Productos y servicios</span></div>
+            <div><strong>Código QR</strong><span>Directo a tu página</span></div>
+            <div><strong>WhatsApp</strong><span>Pedidos y consultas</span></div>
+          </div>
         </div>
-        <div class="portada-datos" aria-label="Lo que incluye">
-          <div><strong>Página informativa</strong><span>Productos y servicios</span></div>
-          <div><strong>Código QR</strong><span>Directo a tu página</span></div>
-          <div><strong>Botón de WhatsApp</strong><span>Para llegar a más clientes</span></div>
+
+        <div class="portada-ejemplo" aria-hidden="true">
+          <div class="ventana-navegador">
+            <div class="navegador-barra">
+              <span class="navegador-punto"></span>
+              <span class="navegador-punto"></span>
+              <span class="navegador-punto"></span>
+              <span class="navegador-url">tu-negocio.cl</span>
+            </div>
+            <div class="pagina-ejemplo">
+              <div class="ejemplo-encabezado">
+                <strong>Tu negocio</strong>
+                <span>Productos · Servicios · Contacto</span>
+              </div>
+              <div class="ejemplo-linea ejemplo-linea-corta"></div>
+              <div class="ejemplo-linea"></div>
+              <div class="ejemplo-linea"></div>
+              <div class="ejemplo-boton">Ver productos</div>
+              <div class="qr-caja">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://wa.me/56938621425" alt="">
+                <span>Escanea y accede a tu página</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ====================================================
-         SECCIÓN 3 · QUÉ INCLUYE TU PÁGINA
-         - .lista-incluye ... cuadrícula de 4 características
-         - .item-incluye .... cada punto (número + título + texto)
-       ==================================================== -->
+    <!-- SECCION 3 · QUE INCLUYE -->
     <section class="seccion" id="seccion-incluye">
       <div class="contenedor-central">
         <div class="seccion-encabezado">
-          <span class="seccion-etiqueta">Tu página</span>
           <h2>Una página clara para mostrar tu negocio</h2>
           <p>Ideal para negocios de bienes, servicios o ambos. El cliente ve qué ofreces, precios, horarios y contacto en un solo lugar.</p>
         </div>
-
         <div class="lista-incluye">
           <div class="item-incluye">
-            <span class="item-numero">01</span>
+            <span class="item-marcador">✓</span>
             <h3>Presentación de tu negocio</h3>
             <p>Sección principal con tu nombre, rubro y lo que vendes o ofreces como servicio.</p>
           </div>
           <div class="item-incluye">
-            <span class="item-numero">02</span>
+            <span class="item-marcador">✓</span>
             <h3>Productos y servicios</h3>
             <p>Lista ordenada de lo que ofreces, con descripciones y precios si lo necesitas.</p>
           </div>
           <div class="item-incluye">
-            <span class="item-numero">03</span>
+            <span class="item-marcador">✓</span>
             <h3>Código QR</h3>
             <p>Código QR para imprimir y pegar en tu local, tarjeta o empaque. Al escanearlo, abre tu página.</p>
           </div>
           <div class="item-incluye">
-            <span class="item-numero">04</span>
+            <span class="item-marcador">✓</span>
             <h3>Botón de WhatsApp</h3>
             <p>Botón directo para que tus clientes te escriban y te hagan consultas o pedidos.</p>
           </div>
@@ -107,29 +126,18 @@
       </div>
     </section>
 
-    <!-- ====================================================
-         SECCIÓN 4 · SERVICIOS (solo 2 por ahora)
-         - .cuadricula-servicios .. 1 tarjeta grande + 1 secundaria
-         - .tarjeta-servicio ...... servicio principal / servicio técnico
-         - .tarjeta-etiqueta ...... "Servicio principal" / "Servicio técnico"
-         - .tarjeta-lista ......... lista de lo que incluye cada servicio
-       Para agregar otro servicio: copia un <article class="tarjeta-servicio">.
-       ==================================================== -->
+    <!-- SECCION 4 · SERVICIOS -->
     <section class="seccion seccion-fondo-claro" id="seccion-servicios">
       <div class="contenedor-central">
         <div class="seccion-encabezado">
-          <span class="seccion-etiqueta">Servicios</span>
           <h2>Qué ofrecemos</h2>
           <p>Diseño web para emprendedores y soporte técnico para tu computadora.</p>
         </div>
-
         <div class="cuadricula-servicios">
-
-          <!-- SERVICIO PRINCIPAL · Landing Page Básica -->
-          <article class="tarjeta-servicio">
+          <article class="tarjeta-servicio tarjeta-principal">
             <span class="tarjeta-etiqueta">Servicio principal</span>
             <h3 class="tarjeta-titulo">Landing page básica para tu negocio</h3>
-            <p class="tarjeta-descripcion">Página web informativa alojada en GitHub Pages, lista para compartir y fácil de mantener. Pensada para que pequeños emprendedores muestren lo que venden o lo que ofrecen como servicio.</p>
+            <p class="tarjeta-descripcion">Página web informativa lista para compartir y fácil de mantener. Pensada para pequeños emprendedores que quieren verse profesionales.</p>
             <ul class="tarjeta-lista">
               <li>Muestra productos, servicios o ambas cosas</li>
               <li>Código QR que lleva directo a tu página</li>
@@ -137,101 +145,81 @@
               <li>Se ve bien en celular y computadora</li>
               <li>Textos y datos de contacto de tu negocio</li>
             </ul>
-            <a class="tarjeta-enlace" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20una%20landing%20page%20para%20mi%20negocio." target="_blank" rel="noopener">Pedir mi página →</a>
+            <a class="tarjeta-enlace" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20una%20landing%20page%20para%20mi%20negocio." target="_blank" rel="noopener">Pedir mi página</a>
           </article>
 
-          <!-- SERVICIO TÉCNICO · Formateo e Instalación -->
-          <article class="tarjeta-servicio">
+          <article class="tarjeta-servicio tarjeta-tecnica">
             <span class="tarjeta-etiqueta">Servicio técnico</span>
             <h3 class="tarjeta-titulo">Formateo e instalación de software</h3>
-            <p class="tarjeta-descripcion">Dejamos tu computadora rápida y lista para trabajar, con sistema limpio y programas esenciales.</p>
+            <p class="tarjeta-descripcion">Dejamos tu computadora rápida y lista para trabajar.</p>
             <ul class="tarjeta-lista">
               <li>Formateo e instalación de Windows</li>
-              <li>Instalación de programas y controladores</li>
+              <li>Programas y controladores</li>
               <li>Configuración básica lista para usar</li>
             </ul>
-            <a class="tarjeta-enlace" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20formateo%20e%20instalaci%C3%B3n%20de%20software%20para%20mi%20equipo." target="_blank" rel="noopener">Solicitar servicio →</a>
+            <p class="tarjeta-garantia">Te confirmamos respaldo y tiempos antes de tocar tu equipo.</p>
+            <a class="tarjeta-enlace" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20formateo%20e%20instalaci%C3%B3n%20de%20software%20para%20mi%20equipo." target="_blank" rel="noopener">Solicitar servicio</a>
           </article>
-
-        </div><!-- cierre: .cuadricula-servicios -->
+        </div>
       </div>
     </section>
 
-    <!-- ====================================================
-         SECCIÓN 5 · CÓMO FUNCIONA (3 pasos)
-         - .lista-pasos .... ol con 3 pasos
-         - .paso ........... cada paso
-         - .paso-numero .... círculo con el número 1, 2, 3
-       ==================================================== -->
+    <!-- SECCION 5 · COMO FUNCIONA -->
     <section class="seccion" id="seccion-como-funciona">
       <div class="contenedor-central">
         <div class="seccion-encabezado">
-          <span class="seccion-etiqueta">Proceso</span>
           <h2>Cómo funciona</h2>
           <p>En tres pasos tienes tu página en línea y lista para clientes.</p>
         </div>
-
         <ol class="lista-pasos">
           <li class="paso">
             <span class="paso-numero">1</span>
             <h3>Cuéntanos de tu negocio</h3>
-            <p>Me das el nombre, lo que vendes o ofreces, precios y tu número de WhatsApp.</p>
+            <p>Nombre, lo que vendes, precios y tu número de WhatsApp.</p>
           </li>
           <li class="paso">
             <span class="paso-numero">2</span>
             <h3>Preparamos tu página</h3>
-            <p>Construimos tu página informativa y te entregamos el enlace y el código QR.</p>
+            <p>Construimos tu página y te entregamos el enlace y el QR.</p>
           </li>
           <li class="paso">
             <span class="paso-numero">3</span>
             <h3>Comparte y recibe clientes</h3>
-            <p>Pega el QR en tu local o compártelo por redes. Tus clientes llegan por WhatsApp.</p>
+            <p>Pega el QR en tu local o compártelo. Tus clientes llegan por WhatsApp.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- ====================================================
-         SECCIÓN 6 · LLAMADO A LA ACCIÓN / CONTACTO
-         - .caja-contacto .... caja negra con botón de WhatsApp
-       Cambia el texto y el número de WhatsApp aquí.
-       ==================================================== -->
+    <!-- SECCION 6 · CONTACTO -->
     <section class="seccion seccion-fondo-claro" id="seccion-contacto" aria-labelledby="titulo-contacto">
       <div class="contenedor-central">
         <div class="caja-contacto">
           <h2 id="titulo-contacto">¿Quieres tu página web informativa?</h2>
-          <p>Escríbeme por WhatsApp con lo que vendes o el servicio que ofreces y te digo qué incluye tu página y cuánto cuesta, sin compromiso.</p>
-          <a class="boton boton-whatsapp boton-grande" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20mi%20p%C3%A1gina%20web%20informativa%20para%20mi%20negocio." target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
+          <p>Escríbeme con lo que vendes o el servicio que ofreces y te digo qué incluye y cuánto cuesta, sin compromiso.</p>
+          <a class="boton boton-whatsapp boton-grande" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20mi%20p%C3%A1gina%20web%20informativa%20para%20mi%20negocio." target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+          <div class="contacto-datos">
+            <span>Respondemos en el día</span>
+            <span>Atención por WhatsApp</span>
+            <span>Chile</span>
+          </div>
         </div>
       </div>
     </section>
+  </main>
 
-  </main><!-- cierre: contenido principal -->
-
-  <!-- ======================================================
-       SECCIÓN 7 · PIE DE PÁGINA
-       Cambia el año y el nombre "DiegoTech" aquí.
-       ====================================================== -->
+  <!-- SECCION 7 · PIE DE PAGINA -->
   <footer class="pie-pagina">
     <p>© 2026 DiegoTech — Páginas web y servicio técnico</p>
+    <p class="pie-subtitulo">Páginas web informativas con QR y soporte técnico local.</p>
   </footer>
 
-  <!-- ======================================================
-       SECCIÓN 8 · BOTÓN FLOTANTE DE WHATSAPP
-       - .boton-whatsapp-flotante . círculo verde fijo en la esquina
-       Cambia el número de WhatsApp aquí (mismo que en las tarjetas).
-       ====================================================== -->
+  <!-- SECCION 8 · BOTON WHATSAPP FLOTANTE -->
   <a class="boton-whatsapp-flotante" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   </a>
 
-  <!-- ======================================================
-       SCRIPT · Archivo externo js/script.js
-       - Menú móvil (abrir / cerrar)
-       - Encabezado que se oculta al bajar y aparece al subir
-       El atributo defer espera a que cargue todo el HTML antes
-       de ejecutar el script, igual que estaba antes.
-       ====================================================== -->
+  <!-- SCRIPT -->
   <script src="js/script.js" defer></script>
 </body>
 </html>
