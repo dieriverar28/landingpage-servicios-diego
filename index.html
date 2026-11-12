@@ -3,16 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DiegoTech — Páginas web informativas con QR y WhatsApp para emprendedores, y servicio técnico de formateo e instalación de software.">
-  <meta property="og:title" content="DiegoTech | Páginas web y servicio técnico">
-  <meta property="og:description" content="Página web informativa + QR + WhatsApp para tu negocio. También servicio técnico de formateo e instalación de software.">
+  <meta name="description" content="DiegoTech — Páginas web informativas desde $20.000, pago único y sin mensualidad. Incluye código QR y botón de WhatsApp. También formateo e instalación de software en Santiago.">
+  <meta name="theme-color" content="#0e1620">
+  <meta property="og:title" content="DiegoTech | Páginas web desde $20.000 y servicio técnico">
+  <meta property="og:description" content="Página web informativa + QR + WhatsApp para tu negocio. Pago único, sin mensualidad. Entrega en 3 días.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CL">
-  <title>DiegoTech | Páginas web y servicio técnico</title>
+  <meta property="og:site_name" content="DiegoTech">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DiegoTech | Páginas web desde $20.000">
+  <meta name="twitter:description" content="Página web informativa + QR + WhatsApp. Pago único, entrega en 3 días.">
+  <meta name="twitter:image" content="assets/og-image.png">
+  <title>DiegoTech | Páginas web desde $20.000 y servicio técnico</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%230E1620'/><text x='32' y='44' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'>DT</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
   {
@@ -21,50 +28,82 @@
     "name": "DiegoTech",
     "description": "Páginas web informativas para emprendedores y servicio técnico de formateo e instalación de software.",
     "telephone": "+56 9 3862 1425",
-    "areaServed": "Chile",
-    "priceRange": "$$"
+    "priceRange": "20000-30000 CLP",
+    "areaServed": "Santiago, Chile",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santiago",
+      "addressCountry": "CL"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "10:00",
+      "closes": "19:00"
+    },
+    "sameAs": ["https://www.instagram.com/zugarbomb"]
   }
   </script>
 </head>
 <body>
 
   <!-- ACCESIBILIDAD -->
-  <a class="enlace-salta" href="#seccion-servicios">Saltar a servicios</a>
+  <a class="enlace-salta" href="#contenido">Saltar al contenido</a>
 
   <!-- SECCION 1 · ENCABEZADO -->
   <header class="encabezado-barra">
     <div class="contenedor-central encabezado-contenido">
       <a class="logo-sitio" href="#inicio">Diego<span>Tech</span></a>
-      <button class="boton-menu-movil" id="botonMenuMovil" aria-expanded="false" aria-controls="menuNavegacion" aria-label="Abrir menú">☰</button>
+      <button class="boton-menu-movil" id="botonMenuMovil" aria-expanded="false" aria-controls="menuNavegacion" aria-label="Abrir menú">
+        <svg class="icono-abrir" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+          <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <svg class="icono-cerrar" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+          <path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
       <nav class="navegacion-menu" id="menuNavegacion" aria-label="Navegación principal">
         <ul class="navegacion-lista">
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#seccion-incluye">Tu página</a></li>
           <li><a href="#seccion-servicios">Servicios</a></li>
+          <li><a href="#seccion-como-funciona">Cómo funciona</a></li>
+          <li><a href="#seccion-preguntas">Preguntas</a></li>
           <li><a href="#seccion-contacto">Contacto</a></li>
         </ul>
-        <a class="boton boton-primario" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio." target="_blank" rel="noopener">Cotizar</a>
+        <a class="boton boton-whatsapp" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener">Escríbeme</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="contenido">
     <!-- SECCION 2 · PORTADA -->
     <section class="portada-hero" id="inicio">
       <div class="contenedor-central portada-contenido">
         <div class="portada-texto">
           <span class="portada-insignia">Páginas web para emprendedores</span>
-          <h1 class="portada-titulo">Tu negocio en una página que suma clientes</h1>
-          <p class="portada-subtitulo">Página informativa + código QR + botón de WhatsApp. Tu cliente escanea, ve qué vendes y te escribe directo. Entrega entre 2 a 3 días.</p>
+          <h1 class="portada-titulo">Tu negocio en una página web que suma clientes</h1>
+          <p class="portada-subtitulo">Página informativa + código QR + botón de WhatsApp. Tu cliente escanea, ve qué vendes y te escribe directamente. Desde $20.000, pago único, lista en 3 días.</p>
           <div class="portada-botones">
-            <a class="boton boton-primario boton-grande" href="#seccion-servicios">Ver servicios</a>
-            <a class="boton boton-contorno-claro boton-grande" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio." target="_blank" rel="noopener">Pedir por WhatsApp</a>
+            <a class="boton boton-whatsapp boton-grande" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+            <a class="enlace-flecha" href="#seccion-servicios">Ver precios y qué incluye</a>
           </div>
-          <div class="portada-datos" aria-label="Beneficios">
-            <div><strong>Página informativa</strong><span>Productos y servicios</span></div>
-            <div><strong>Código QR</strong><span>Directo a tu página</span></div>
-            <div><strong>WhatsApp</strong><span>Pedidos y consultas</span></div>
-            <div><strong>Tus Redes Sociales</strong><span>Links directos a tus redes</span></div>
+          <div class="portada-datos">
+            <div>
+              <strong>Desde $20.000</strong>
+              <span>Pago único, sin mensualidad</span>
+            </div>
+            <div>
+              <strong>Código QR</strong>
+              <span>Listo para imprimir</span>
+            </div>
+            <div>
+              <strong>WhatsApp</strong>
+              <span>Pedidos y consultas</span>
+            </div>
+            <div>
+              <strong>3 días</strong>
+              <span>Plazo de entrega</span>
+            </div>
           </div>
         </div>
 
@@ -74,7 +113,7 @@
               <span class="navegador-punto"></span>
               <span class="navegador-punto"></span>
               <span class="navegador-punto"></span>
-              <span class="navegador-url">tu-negocio.cl</span>
+              <span class="navegador-url">tu-negocio.github.io</span>
             </div>
             <div class="pagina-ejemplo">
               <div class="ejemplo-encabezado">
@@ -86,8 +125,8 @@
               <div class="ejemplo-linea"></div>
               <div class="ejemplo-boton">Ver productos</div>
               <div class="qr-caja">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://wa.me/56938621425" alt="">
-                <span>Escanea y accede a tu página</span>
+                <img src="assets/qr-demo.png" width="240" height="240" alt="" loading="lazy" decoding="async">
+                <span>Así se ve tu QR</span>
               </div>
             </div>
           </div>
@@ -95,98 +134,78 @@
       </div>
     </section>
 
-    <!-- SECCION 3 · QUE INCLUYE -->
-    <section class="seccion" id="seccion-incluye">
+    <!-- SECCION 3 · SERVICIOS Y PRECIOS -->
+    <section class="seccion seccion-fondo-claro" id="seccion-servicios" aria-labelledby="titulo-servicios">
       <div class="contenedor-central">
         <div class="seccion-encabezado">
-          <h2>Una página clara para mostrar tu negocio</h2>
-          <p>Ideal para negocios de bienes, servicios o ambos. El cliente ve qué ofreces, precios, horarios y contacto en un solo lugar.</p>
+          <h2 id="titulo-servicios">Páginas web con precio a la vista</h2>
+          <p>Elige una y te la entrego lista para compartir. Es un pago único: no hay hosting, dominio ni mensualidad que pagar después.</p>
         </div>
-        <div class="lista-incluye">
-          <div class="item-incluye">
-            <span class="item-marcador">✓</span>
-            <h3>Presentación de tu negocio</h3>
-            <p>Sección principal con tu nombre, rubro y lo que vendes o ofreces como servicio.</p>
-          </div>
-          <div class="item-incluye">
-            <span class="item-marcador">✓</span>
-            <h3>Productos y servicios</h3>
-            <p>Lista ordenada de lo que ofreces, con descripciones y precios si lo necesitas.</p>
-          </div>
-          <div class="item-incluye">
-            <span class="item-marcador">✓</span>
-            <h3>Código QR</h3>
-            <p>Código QR para imprimir y pegar en tu local, tarjeta o empaque. Al escanearlo, abre tu página.</p>
-          </div>
-          <div class="item-incluye">
-            <span class="item-marcador">✓</span>
-            <h3>Botón de WhatsApp</h3>
-            <p>Botón directo para que tus clientes te escriban y te hagan consultas o pedidos.</p>
-          </div>
-          <div class="item-incluye">
-            <span class="item-marcador">✓</span>
-            <h3>Redes Sociales</h3>
-            <p>Links directos a tus redes sociales para que tus clientes te encuentren y sigan.</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- SECCION 4 · SERVICIOS -->
-    <section class="seccion seccion-fondo-claro" id="seccion-servicios">
-      <div class="contenedor-central">
-        <div class="seccion-encabezado">
-          <h2>Qué ofrecemos</h2>
-          <p>Diseño web para emprendedores y soporte técnico para tu computadora.</p>
-        </div>
-        <div class="cuadricula-servicios">
-          <article class="tarjeta-servicio tarjeta-principal">
-            <span class="tarjeta-etiqueta">Servicio principal</span>
-            <h3 class="tarjeta-titulo">Landing page básica para tu negocio</h3>
-            <p class="tarjeta-descripcion">Página web informativa lista para compartir y fácil de mantener. Pensada para pequeños emprendedores que quieren verse profesionales.</p>
-            <ul class="tarjeta-lista">
-              <li>Muestra productos, servicios o ambas cosas</li>
-              <li>Código QR que lleva directo a tu página</li>
-              <li>Botón de WhatsApp para recibir más clientes</li>
-              <li>Se ve bien en celular y computadora</li>
-              <li>Textos y datos de contacto de tu negocio</li>
+        <div class="cuadricula-planes">
+          <article class="plan">
+            <h3 class="plan-nombre">Página básica</h3>
+            <p class="plan-precio"><span class="plan-desde">desde</span> $20.000</p>
+            <p class="plan-nota">Pago único · CLP</p>
+            <ul class="plan-lista">
+              <li>Presentación de tu negocio</li>
+              <li>Productos y servicios</li>
+              <li>Código QR listo para imprimir</li>
+              <li>Publicada gratis, sin costo mensual</li>
+              <li>Entrega en 3 días</li>
             </ul>
-            <a class="tarjeta-enlace" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20una%20landing%20page%20para%20mi%20negocio." target="_blank" rel="noopener">Pedir mi página</a>
+            <a class="boton boton-contorno boton-bloque" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20la%20p%C3%A1gina%20b%C3%A1sica%20de%20%2420.000." target="_blank" rel="noopener">Elegir la básica</a>
           </article>
 
-          <article class="tarjeta-servicio tarjeta-tecnica">
+          <article class="plan plan-destacado">
+            <span class="plan-etiqueta">La más pedida</span>
+            <h3 class="plan-nombre">Página completa</h3>
+            <p class="plan-precio"><span class="plan-desde">desde</span> $30.000</p>
+            <p class="plan-nota">Pago único · CLP</p>
+            <ul class="plan-lista">
+              <li>Todo lo de la página básica</li>
+              <li>Botón de WhatsApp directo</li>
+              <li>Links a tus redes sociales</li>
+              <li>Pensada para recibir pedidos</li>
+            </ul>
+            <a class="boton boton-whatsapp boton-bloque" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20la%20p%C3%A1gina%20completa%20de%20%2430.000." target="_blank" rel="noopener">Elegir la completa</a>
+          </article>
+        </div>
+
+        <p class="nota-alcance">Se publica en GitHub Pages y Cloudflare: tu página queda en línea sin pagar hosting ni dominio. Si más adelante quieres un dominio propio, se puede agregar aparte.</p>
+
+        <div class="bloque-tecnico">
+          <div class="tecnico-texto">
             <span class="tarjeta-etiqueta">Servicio técnico</span>
-            <h3 class="tarjeta-titulo">Formateo e instalación de software</h3>
-            <p class="tarjeta-descripcion">Dejamos tu computadora rápida y lista para trabajar.</p>
-            <ul class="tarjeta-lista">
-              <li>Formateo e instalación de Windows</li>
-              <li>Programas y controladores</li>
-              <li>Configuración básica lista para usar</li>
-            </ul>
-            <p class="tarjeta-garantia">Te confirmamos respaldo y tiempos antes de tocar tu equipo.</p>
-            <a class="tarjeta-enlace" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20formateo%20e%20instalaci%C3%B3n%20de%20software%20para%20mi%20equipo." target="_blank" rel="noopener">Solicitar servicio</a>
-          </article>
+            <h3 class="tecnico-titulo">Formateo e instalación de software</h3>
+            <p>Formateo e instalación de Windows, programas y controladores, con la configuración básica lista para trabajar.</p>
+            <p class="tecnico-garantia">Te confirmo respaldo y tiempos antes de tocar tu equipo.</p>
+          </div>
+          <div class="tecnico-accion">
+            <p class="tecnico-precio">Cotización según tu equipo</p>
+            <a class="boton boton-whatsapp" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20cotizar%20formateo%20e%20instalaci%C3%B3n%20de%20software%20para%20mi%20equipo." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SECCION 5 · COMO FUNCIONA -->
-    <section class="seccion" id="seccion-como-funciona">
+    <!-- SECCION 4 · COMO FUNCIONA -->
+    <section class="seccion" id="seccion-como-funciona" aria-labelledby="titulo-como-funciona">
       <div class="contenedor-central">
         <div class="seccion-encabezado">
-          <h2>Cómo funciona</h2>
+          <h2 id="titulo-como-funciona">Cómo funciona</h2>
           <p>En tres pasos tienes tu página en línea y lista para clientes.</p>
         </div>
         <ol class="lista-pasos">
           <li class="paso">
             <span class="paso-numero">1</span>
-            <h3>Cuéntanos de tu negocio</h3>
-            <p>Nombre, lo que vendes, precios y tu número de WhatsApp.</p>
+            <h3>Cuéntame sobre tu negocio</h3>
+            <p>Nombre, lo que vendes, precios, horarios y tu número de WhatsApp.</p>
           </li>
           <li class="paso">
             <span class="paso-numero">2</span>
-            <h3>Preparamos tu página</h3>
-            <p>Construimos tu página y te entregamos el enlace y el QR.</p>
+            <h3>Preparo tu página</h3>
+            <p>Armo la página y te entrego el enlace y el QR listo para imprimir.</p>
           </li>
           <li class="paso">
             <span class="paso-numero">3</span>
@@ -197,17 +216,53 @@
       </div>
     </section>
 
+    <!-- SECCION 5 · PREGUNTAS FRECUENTES -->
+    <section class="seccion seccion-fondo-claro" id="seccion-preguntas" aria-labelledby="titulo-preguntas">
+      <div class="contenedor-central">
+        <div class="seccion-encabezado">
+          <h2 id="titulo-preguntas">Preguntas frecuentes</h2>
+          <p>Lo que más me preguntan antes de contratar.</p>
+        </div>
+        <div class="lista-preguntas">
+          <details class="pregunta">
+            <summary>¿Tengo que pagar hosting o dominio todos los meses?</summary>
+            <p>No. La página se publica en GitHub Pages y Cloudflare, que son gratuitos: no hay mensualidad ni renovación anual. Si algún día quieres un dominio propio (tunegocio.cl), se agrega aparte y se paga directo al proveedor.</p>
+          </details>
+          <details class="pregunta">
+            <summary>¿Cuánto demora?</summary>
+            <p>3 días desde que me pasas los textos, precios y fotos de tu negocio. Si tienes todo listo, se puede cerrar antes.</p>
+          </details>
+          <details class="pregunta">
+            <summary>¿Qué necesito enviarte?</summary>
+            <p>Nombre del negocio, qué vendes, precios, horarios, dirección o comuna, tu número de WhatsApp, tus redes y fotos si tienes. Si no tienes fotos, la página se arma igual con el contenido que me des.</p>
+          </details>
+          <details class="pregunta">
+            <summary>¿Quién actualiza los precios o los productos después?</summary>
+            <p>Los cambios se coordinan por WhatsApp. Si cambiaste un precio o quieres agregar un producto, me escribes y lo actualizamos.</p>
+          </details>
+          <details class="pregunta">
+            <summary>¿Necesito RUT o empresa para contratar?</summary>
+            <p>No. Es un servicio pensado para personas que recién empiezan y todavía no tienen empresa constituida. El comprobante de pago se conversa al cotizar.</p>
+          </details>
+          <details class="pregunta">
+            <summary>¿La página queda a mi nombre?</summary>
+            <p>Sí. Se publica en una cuenta gratuita y el enlace es tuyo para compartir en tu local, tus tarjetas y tus redes.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- SECCION 6 · CONTACTO -->
-    <section class="seccion seccion-fondo-claro" id="seccion-contacto" aria-labelledby="titulo-contacto">
+    <section class="seccion" id="seccion-contacto" aria-labelledby="titulo-contacto">
       <div class="contenedor-central">
         <div class="caja-contacto">
-          <h2 id="titulo-contacto">¿Quieres tu página web / landing page informativa?</h2>
-          <p>Escríbeme con lo que vendes o el servicio que ofreces y te explico lo que incluye y cuánto cuesta, sin compromiso.</p>
-          <a class="boton boton-whatsapp boton-grande" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20mi%20p%C3%A1gina%20web%20informativa%20para%20mi%20negocio." target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+          <h2 id="titulo-contacto">Tu página puede estar en línea esta semana</h2>
+          <p>Escríbeme con lo que vendes y te confirmo qué plan te conviene, qué incluye y en qué plazo la entrego. Sin compromiso.</p>
+          <a class="boton boton-whatsapp boton-grande" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20mi%20p%C3%A1gina%20web%20informativa%20para%20mi%20negocio." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
           <div class="contacto-datos">
-            <span>Respondemos en el día</span>
-            <span>Atención por WhatsApp</span>
-            <span>Chile</span>
+            <span>Respondo el mismo día</span>
+            <span>Lun a Vie, 10:00–19:00</span>
+            <span>Santiago, Chile</span>
           </div>
         </div>
       </div>
@@ -216,14 +271,44 @@
 
   <!-- SECCION 7 · PIE DE PAGINA -->
   <footer class="pie-pagina">
-    <p>© 2026 DiegoTech — Páginas web y servicio técnico</p>
-    <p class="pie-subtitulo">Páginas web informativas con QR y soporte técnico local.</p>
+    <div class="contenedor-central pie-contenido">
+      <div class="pie-marca">
+        <p class="pie-logo">Diego<span>Tech</span></p>
+        <p class="pie-bajada">Páginas web informativas con QR y servicio técnico. Pago único, sin mensualidad.</p>
+      </div>
+      <div class="pie-contacto">
+        <a href="tel:+56938621425">+56 9 3862 1425</a>
+        <a href="https://www.instagram.com/zugarbomb" target="_blank" rel="noopener">Instagram @zugarbomb</a>
+        <p>Lun a Vie, 10:00–19:00 · Santiago, Chile</p>
+      </div>
+    </div>
+    <p class="pie-legal">© <span id="anioActual">2026</span> DiegoTech — Páginas web y servicio técnico</p>
   </footer>
 
   <!-- SECCION 8 · BOTON WHATSAPP FLOTANTE -->
-  <a class="boton-whatsapp-flotante" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  <a class="boton-whatsapp-flotante" href="https://wa.me/56938621425?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   </a>
+
+  <noscript>
+    <style>
+      .boton-menu-movil { display: none !important; }
+      @media (max-width: 768px) {
+        .encabezado-contenido { flex-wrap: wrap; }
+        .navegacion-menu {
+          display: flex !important;
+          position: static !important;
+          width: 100%;
+          flex-direction: row !important;
+          flex-wrap: wrap;
+          padding: 0 0 12px !important;
+          border: 0 !important;
+        }
+        .navegacion-lista { flex-direction: row !important; flex-wrap: wrap; gap: 16px !important; }
+        .portada-hero { padding-top: 190px !important; }
+      }
+    </style>
+  </noscript>
 
   <!-- SCRIPT -->
   <script src="js/script.js" defer></script>
