@@ -714,55 +714,6 @@ main[id] {
   max-width: 820px;
 }
 
-.pregunta {
-  background: var(--papel);
-  border: 1px solid var(--linea);
-  border-radius: var(--radio);
-  margin-bottom: 12px;
-}
-
-.pregunta summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  min-height: 56px;
-  padding: 16px 20px;
-  font-weight: 700;
-  font-size: 16px;
-  cursor: pointer;
-  list-style: none;
-}
-
-.pregunta summary::-webkit-details-marker {
-  display: none;
-}
-
-.pregunta summary::after {
-  content: "+";
-  flex-shrink: 0;
-  font-size: 24px;
-  line-height: 1;
-  font-weight: 400;
-  color: var(--senal-oscuro);
-}
-
-.pregunta[open] summary::after {
-  content: "–";
-}
-
-.pregunta summary:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.pregunta p {
-  margin: 0;
-  padding: 0 20px 20px;
-  max-width: 68ch;
-  font-size: 15px;
-  color: var(--acero);
-}
 
 /* 13. CONTACTO */
 .caja-contacto {
@@ -1025,4 +976,76 @@ main[id] {
     transition: none !important;
     transform: none !important;
   }
+}
+
+/* El Container de Bootstrap con el mismo ancho que tu .contenedor-central */
+.container {
+  width: min(1080px, 92%);
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Accordion de React Bootstrap con la apariencia de tus preguntas */
+.lista-preguntas {
+  --bs-accordion-bg: var(--papel);
+  --bs-accordion-color: var(--acero);
+  --bs-accordion-btn-color: var(--tinta);
+  --bs-accordion-btn-bg: var(--papel);
+  --bs-accordion-active-color: var(--tinta);
+  --bs-accordion-active-bg: var(--papel);
+  --bs-accordion-btn-padding-x: 20px;
+  --bs-accordion-btn-padding-y: 16px;
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.lista-preguntas .accordion-item {
+  border: 1px solid var(--linea);
+  border-radius: var(--radio);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+/* El título es un h2 y heredaría la tipografía de títulos */
+.lista-preguntas .accordion-header {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.lista-preguntas .accordion-button {
+  min-height: 56px;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: none;
+}
+
+/* Foco visible para quien navega con teclado (Bootstrap lo quita) */
+.lista-preguntas .accordion-button:focus-visible {
+  outline: 3px solid var(--senal);
+  outline-offset: -3px;
+}
+
+/* Cambiamos la flecha por el + y – de tu diseño */
+.lista-preguntas .accordion-button::after,
+.lista-preguntas .accordion-button:not(.collapsed)::after {
+  content: "+";
+  width: auto;
+  height: auto;
+  background-image: none;
+  transform: none;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--senal-oscuro);
+}
+
+.lista-preguntas .accordion-button:not(.collapsed)::after {
+  content: "–";
+}
+
+.lista-preguntas .accordion-body {
+  padding: 0 20px 20px;
+  max-width: 68ch;
+  font-size: 15px;
+  color: var(--acero);
 }
